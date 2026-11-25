@@ -16,11 +16,8 @@
 <meta name="twitter:description" content="Portfolio of Salahudeen Saeeda Saeed: day-ahead electricity demand forecasting, an IoT telepresence robot for remote medical consultation, and survey analysis for health planning in Kaduna State.">
 <meta name="theme-color" content="#F5F6F4">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/inter-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/space-grotesk-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -34,6 +31,7 @@
       <li><a href="index.html#skills">Skills</a></li>
       <li><a href="index.html#about">About</a></li>
       <li><a href="index.html#contact">Contact</a></li>
+      <li><a class="nav-cta" href="assets/cv.pdf" download>Download CV</a></li>
     </ul></nav>
   </div>
 </header>
@@ -43,22 +41,34 @@
   <div class="container hero-inner">
     <div class="hero-text">
       <p class="eyebrow">Data Science Fellow, Click-On Kaduna DSFP 6.0</p>
+      <p class="hero-name"><span>Salahudeen</span> <span class="gold">Saeeda Saeed</span></p>
       <h1 id="top-title">Data science, machine learning and embedded systems for health.</h1>
       <p class="sub">First Class engineer who works across the whole span of a data system, from the sensors that produce the readings to the models and surveys that turn them into decisions.</p>
       <p>I forecast electricity demand, build IoT devices for remote care, and turn household surveys into decisions for health planning in Kaduna State.</p>
+      <dl class="hero-facts">
+        <div><dt>Based in</dt><dd>Kaduna, Nigeria</dd></div>
+        <div><dt>Open to</dt><dd>fully funded graduate study, research assistantships, fellowships and data roles</dd></div>
+        <div><dt>Degree</dt><dd>B.Eng. Information and Communication Engineering, First Class</dd></div>
+      </dl>
       <p class="btn-row"><a class="btn btn-primary" href="#work">See selected work</a><a class="btn btn-secondary" href="#contact">Get in touch</a><a class="btn btn-secondary" href="assets/cv.pdf" download>Download CV</a></p>
     </div>
-
+    <aside class="hero-stats" aria-label="Highlights">
+      <p class="stat-num">39%</p>
+      <p class="stat-text">Outperformed CAISO’s published day-ahead forecast by 39%, without weather inputs.</p>
+      <p class="stat-num">4.85<span>/5.00</span></p>
+      <p class="stat-text">First Class Honours CGPA, B.Eng. Information and Communication Engineering, AFIT Kaduna.</p>
+    </aside>
   </div>
 </section>
+<div class="stripe" aria-hidden="true"></div>
 
 <section class="band" aria-labelledby="focus-title">
   <div class="container">
-    <h2 id="focus-title" class="sr-only">Focus areas</h2>
-    <div class="cards three">
-      <div class="card"><h3>Forecasting and machine learning</h3><p>Time-series forecasting with gradient boosting, validated with expanding-window backtesting.</p></div>
-      <div class="card"><h3>Embedded systems and IoT</h3><p>ESP32 and Arduino hardware, sensors, telemetry and live dashboards for remote care.</p></div>
-      <div class="card"><h3>Health data and research</h3><p>Survey analysis, desk reviews, data quality and data protection planning for Kaduna State.</p></div>
+    <h2 id="focus-title" class="sec-title">Areas of work</h2>
+    <div class="cards three areas">
+      <div class="area"><h3>Forecasting and machine learning</h3><p>Time-series forecasting with gradient boosting, validated with expanding-window backtesting.</p></div>
+      <div class="area"><h3>Embedded systems and IoT</h3><p>ESP32 and Arduino hardware, sensors, telemetry and live dashboards for remote care.</p></div>
+      <div class="area"><h3>Health data and research</h3><p>Survey analysis, desk reviews, data quality and data protection planning for Kaduna State.</p></div>
     </div>
   </div>
 </section>
@@ -254,7 +264,7 @@
   </div>
 </section>
 
-<section id="contact" class="band alt" aria-labelledby="contact-title">
+<section id="contact" class="band dark" aria-labelledby="contact-title">
   <div class="container">
     <p class="eyebrow">Contact</p>
     <h2 id="contact-title">Let us talk</h2>

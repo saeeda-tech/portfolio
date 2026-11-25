@@ -44,7 +44,7 @@ const size = rel => {
 // ---------- shared layout ----------
 const NAV = [['Work', '#work'], ['Experience', '#experience'], ['Skills', '#skills'], ['About', '#about'], ['Contact', '#contact']];
 
-const FONTS = ['inter-latin-400-normal', 'inter-latin-500-normal', 'inter-latin-600-normal', 'space-grotesk-latin-500-normal', 'space-grotesk-latin-700-normal'];
+const FONTS = ['bricolage-grotesque-latin-wght-normal', 'instrument-sans-latin-wght-normal'];
 const PRELOADS = base => FONTS.map(f => `<link rel="preload" href="${base}assets/fonts/${f}.woff2" as="font" type="font/woff2" crossorigin>`).join('\n');
 
 function layout({ file, title, desc, body, base = '', canonical }) {
@@ -77,6 +77,7 @@ ${PRELOADS(base)}
     <a class="brand" href="${base}index.html">${esc(SITE.name)}</a>
     <nav aria-label="Main"><ul>
 ${NAV.map(([l, h]) => `      <li><a href="${base}index.html${h}">${l}</a></li>`).join('\n')}
+${exists('assets/cv.pdf') ? `      <li><a class="nav-cta" href="${base}assets/cv.pdf" download>Download CV</a></li>` : ''}
     </ul></nav>
   </div>
 </header>
@@ -171,20 +172,32 @@ ${list.map(e => `  <li>
   <div class="container hero-inner">
     <div class="hero-text">
       <p class="eyebrow">${esc(SITE.role)}</p>
+      <p class="hero-name"><span>Salahudeen</span> <span class="gold">Saeeda Saeed</span></p>
       <h1 id="top-title">${esc(SITE.h1)}</h1>
       <p class="sub">${esc(SITE.sub)}</p>
       <p>${esc(SITE.intro)}</p>
+      <dl class="hero-facts">
+        <div><dt>Based in</dt><dd>${esc(SITE.location)}</dd></div>
+        <div><dt>Open to</dt><dd>${esc(D.CONTACT.open.replace(/^Open to: /, '').replace(/\.$/, ''))}</dd></div>
+        <div><dt>Degree</dt><dd>B.Eng. Information and Communication Engineering, First Class</dd></div>
+      </dl>
       <p class="btn-row"><a class="btn btn-primary" href="#work">See selected work</a><a class="btn btn-secondary" href="#contact">Get in touch</a>${cv('btn btn-secondary')}</p>
     </div>
-${hasPhoto ? `    <div class="hero-photo">${img('assets/me.jpg', 'Portrait of ' + SITE.name, st, 'photo')}</div>` : ''}
+${hasPhoto ? `    <div class="hero-photo">${img('assets/me.jpg', 'Portrait of ' + SITE.name, st, 'photo')}</div>` : `    <aside class="hero-stats" aria-label="Highlights">
+      <p class="stat-num">39%</p>
+      <p class="stat-text">Outperformed CAISO\u2019s published day-ahead forecast by 39%, without weather inputs.</p>
+      <p class="stat-num">4.85<span>/5.00</span></p>
+      <p class="stat-text">First Class Honours CGPA, B.Eng. Information and Communication Engineering, AFIT Kaduna.</p>
+    </aside>`}
   </div>
 </section>
+<div class="stripe" aria-hidden="true"></div>
 
 <section class="band" aria-labelledby="focus-title">
   <div class="container">
-    <h2 id="focus-title" class="sr-only">Focus areas</h2>
-    <div class="cards three">
-${D.FOCUS.map(([h, p]) => `      <div class="card"><h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join('\n')}
+    <h2 id="focus-title" class="sec-title">Areas of work</h2>
+    <div class="cards three areas">
+${D.FOCUS.map(([h, p]) => `      <div class="area"><h3>${esc(h)}</h3><p>${esc(p)}</p></div>`).join('\n')}
     </div>
   </div>
 </section>
@@ -269,7 +282,7 @@ ${D.ABOUT.facts.map(([k, v]) => `      <div><dt>${esc(k)}</dt><dd>${esc(v)}</dd>
   </div>
 </section>
 
-<section id="contact" class="band alt" aria-labelledby="contact-title">
+<section id="contact" class="band dark" aria-labelledby="contact-title">
   <div class="container">
     <p class="eyebrow">Contact</p>
     <h2 id="contact-title">${esc(D.CONTACT.heading)}</h2>
