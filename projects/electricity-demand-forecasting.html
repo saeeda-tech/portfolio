@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Day-ahead electricity demand forecasting | Salahudeen Saeeda Saeed</title>
+<meta name="description" content="A leakage-safe day-ahead hourly load forecasting pipeline on US EIA-930 grid data across three balancing authorities: CAISO, PJM and ERCOT.">
+<link rel="canonical" href="https://example.com/projects/electricity-demand-forecasting.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Day-ahead electricity demand forecasting | Salahudeen Saeeda Saeed">
+<meta property="og:description" content="A leakage-safe day-ahead hourly load forecasting pipeline on US EIA-930 grid data across three balancing authorities: CAISO, PJM and ERCOT.">
+<meta property="og:url" content="https://example.com/projects/electricity-demand-forecasting.html">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Day-ahead electricity demand forecasting | Salahudeen Saeeda Saeed">
+<meta name="twitter:description" content="A leakage-safe day-ahead hourly load forecasting pipeline on US EIA-930 grid data across three balancing authorities: CAISO, PJM and ERCOT.">
+<meta name="theme-color" content="#F5F6F4">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="../index.html">Salahudeen Saeeda Saeed</a>
+    <nav aria-label="Main"><ul>
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#skills">Skills</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+<main id="main">
+
+<article class="container narrow case">
+  <p><a class="back" href="../projects.html">← All projects</a></p>
+  <p class="meta"><span class="cat">Machine learning and forecasting</span> · 2026</p>
+  <h1>Day-ahead electricity demand forecasting</h1>
+  <p class="key-result">3.5% to 4.3% MAPE using gradient boosting on lag and calendar features alone. It outperformed CAISO’s published day-ahead forecast by 39% and matched PJM’s, without weather inputs.</p>
+
+  <section class="case-sec"><h2>Problem</h2><p>Grid operators need accurate day-ahead demand forecasts to plan generation and avoid both shortfalls and costly over-supply.</p></section>
+  <section class="case-sec"><h2>What I did</h2><ul><li>Built a leakage-safe pipeline on about 26,000 hourly observations for each of the three balancing authorities.</li><li>Validated it with five-fold expanding-window backtesting.</li><li>Used gradient boosting on lag and calendar features alone.</li><li>Diagnosed the failure in ERCOT as extrapolation beyond training-range demand during the record 2023 summer load, shown by a systematic forecast bias of -1.85%.</li></ul></section>
+  
+  
+  <section class="case-sec"><h2>Limits</h2><ul><li>No weather inputs were used.</li><li>The ERCOT forecasts failed at record demand because the model extrapolated beyond its training range.</li></ul></section>
+  
+  
+  <section class="case-sec"><h2>Tools</h2><ul class="tags"><li>Python</li><li>pandas</li><li>NumPy</li><li>scikit-learn</li><li>gradient boosting</li><li>expanding-window backtesting</li></ul></section>
+
+  <p class="case-btn"><a class="btn btn-primary" href="https://github.com/saeeda-tech/load-forecasting">See the code on GitHub</a></p>
+  <nav class="prevnext" aria-label="Other projects">
+    <span></span>
+    <a class="next" href="kaduna-household-survey-2020.html"><span>Next project</span>Kaduna State General Household Survey 2020: key insights</a>
+  </nav>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>Salahudeen Saeeda Saeed · Portfolio · 2026</p>
+    <p><a href="../projects.html">All projects</a> · <a href="#main">Back to top</a></p>
+  </div>
+</footer>
+<script src="../js/main.js" defer></script>
+</body>
+</html>
